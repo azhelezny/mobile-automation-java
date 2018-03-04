@@ -1,10 +1,8 @@
 package pages;
 
-import framework.utils.Actor;
+import framework.mobile_ui_entries.impl.Button;
+import framework.mobile_ui_entries.impl.InputField;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HelloKittyPage {
 
@@ -12,17 +10,17 @@ public class HelloKittyPage {
     }
 
     public String getCaption() {
-        WebElement element = Actor.findVisibleElement(By.id("textView"));
-        return element.getText();
+        InputField field = new InputField(By.id("textView"));
+        return field.getText();
     }
 
     public void clickButton() {
-        WebElement element = Actor.findVisibleElement(By.id("imageButton"));
-        element.click();
+        Button button = new Button(By.id("imageButton"));
+        button.click();
     }
 
     public void setText(String text) {
-        WebElement element = Actor.findVisibleElement(By.id("editText"));
-        element.sendKeys(text);
+        InputField field = new InputField(By.id("editText"));
+        field.sendKeys(text);
     }
 }

@@ -13,7 +13,7 @@
         <defaultTargetOS>Android</defaultTargetOS>
         <targetOS>${defaultTargetOS}</targetOS>
 
-        <defaultSuiteFile>sandbox.mxl</defaultSuiteFile>
+        <defaultSuiteFile>sandbox.xml</defaultSuiteFile>
         <suiteFile>${defaultSuiteFile}</suiteFile>
 
         <jackson.version>2.6.4</jackson.version>
